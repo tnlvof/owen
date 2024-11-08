@@ -3,9 +3,9 @@ export default function HomePage() {
     <div className="flex flex-col items-center justify-center space-y-6 text-center">
       <h1 className="text-4xl font-bold">My Portfolio</h1>
       <p className="text-lg text-muted-foreground max-w-[600px]">
-        I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences.
+        I&apos;m a Vim enthusiast and tab advocate, finding unmatched efficiency
+        in Vim&apos;s keystroke commands and tabs&apos; flexibility for personal
+        viewing preferences.
       </p>
       <div className="space-y-4">
         <div className="space-y-2">
