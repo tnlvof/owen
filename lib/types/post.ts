@@ -5,4 +5,5 @@ export interface Post {
   date: string;
   tags: string[];
   content: string;
+  code?: string;
 }
