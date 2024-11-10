@@ -1,17 +1,16 @@
-import { use } from "react";
 import { notFound } from "next/navigation";
-import { posts } from "@/lib/data/posts";
 import { Badge } from "@/components/ui/badge";
+import { getPost } from "@/lib/utils/mdx";
+
 
 interface BlogPostPageProps {
-  params: Promise<{
+  params: {
     id: string;
-  }>;
+  };
 }
 
-export default function BlogPostPage(props: BlogPostPageProps) {
-  const params = use(props.params);
-  const post = posts.find((p) => p.id === params.id);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const post = await getPost(params.id);
 
   if (!post) {
     notFound();
@@ -33,7 +32,7 @@ export default function BlogPostPage(props: BlogPostPageProps) {
         </div>
       </div>
 
-      <div className="prose dark:prose-invert max-w-none">{post.content}</div>
+      <div className="prose dark:prose-invert max-w-none">{post.code}</div>
     </article>
   );
 }
