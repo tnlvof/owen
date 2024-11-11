@@ -19,7 +19,7 @@ async function BlogPost({ slug }: { slug: string }) {
   }
 
   return (
-    <article className="py-8 mx-auto max-w-2xl">
+    <article className="p-8 mx-auto max-w-2xl">
       <header className="mb-8">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         {post.description && (
@@ -38,11 +38,11 @@ async function BlogPost({ slug }: { slug: string }) {
 
 export default async function BlogPostPage(props: Props) {
   // 테스트를 위한 3초 딜레이
-//   await delay(3000);
-  
+  //   await delay(3000);
+
   const params = await props.params;
   const post = await getPostBySlug(params.slug);
-  
+
   if (!post) {
     notFound();
   }

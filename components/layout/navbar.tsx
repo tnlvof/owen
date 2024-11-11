@@ -37,9 +37,9 @@ export function Navbar({ posts }: NavbarProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="flex h-14 items-center justify-center">
-          <div className="w-full max-w-2xl px-4 flex items-center justify-between">
+      <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="flex h-14 items-center justify-center border border-border/40 max-w-2xl mx-auto">
+          <div className="w-full max-w-2xl px-4 flex items-center justify-between ">
             <Link href="/" className="flex items-center space-x-2">
               <span className="font-bold">Owen</span>
             </Link>

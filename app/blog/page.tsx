@@ -5,18 +5,19 @@ export default async function BlogPage() {
   const posts = await getAllPosts();
 
   return (
-    <div className="container py-10 space-y-10">
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold">블로그</h1>
-        <p className="text-xl text-muted-foreground">
-          경험을 공유합니다
-        </p>
-      </div>
-
-      <div className="grid gap-6">
-        {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
-        ))}
+    <div className="w-full dark:bg-gray-900 min-h-[calc(100vh-3.5rem)]">
+      <div className="w-full mx-auto p-4">
+        <div className="space-y-8">
+          {posts.map((post, index) => (
+            <div
+              key={post.slug}
+              className="opacity-0 animate-fade-in w-full "
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <PostCard post={post} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
