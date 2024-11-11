@@ -41,7 +41,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <Navbar posts={posts} />
-          <main className="flex-1 flex flex-col items-center max-w-2xl mx-auto w-full px-4">
+          <main className="flex-1 flex flex-col items-center max-w-2xl mx-auto w-full lg:border-l lg:border-r border-border/40 h-[calc(100vh-3.5rem)]">
             {children}
           </main>
         </ThemeProvider>
