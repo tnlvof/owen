@@ -8,7 +8,7 @@ interface PostCardProps {
 
 export function PostCard({ post }: PostCardProps) {
   return (
-    <Link href={`/blog/${post.id}`}>
+    <Link href={`/blog/${post.slug}`}>
       <article className="p-6 space-y-4 rounded-lg border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md">
         <div className="space-y-2">
           <h2 className="text-2xl font-bold tracking-tight">{post.title}</h2>
@@ -16,7 +16,7 @@ export function PostCard({ post }: PostCardProps) {
         </div>
         <p className="text-muted-foreground">{post.description}</p>
         <div className="flex flex-wrap gap-2">
-          {post.tags.map((tag) => (
+          {post.tags?.map((tag) => (
             <Badge key={tag} variant="secondary">
               {tag}
             </Badge>
