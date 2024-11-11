@@ -33,8 +33,19 @@ async function BlogPost({ slug }: { slug: string }) {
   );
 }
 
+// 인위적인 딜레이를 추가하는 함수
+// const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export default async function BlogPostPage(props: Props) {
+  // 테스트를 위한 3초 딜레이
+//   await delay(3000);
+  
   const params = await props.params;
+  const post = await getPostBySlug(params.slug);
+  
+  if (!post) {
+    notFound();
+  }
 
   return (
     <Suspense fallback={<PostLoading />}>
