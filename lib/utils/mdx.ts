@@ -6,6 +6,15 @@ import { Post } from "@/lib/types/post";
 
 const POSTS_PATH = path.join(process.cwd(), "content/posts");
 
+// 한글 파일명을 URL-safe한 slug로 변환하는 함수
+function createSlug(filename: string): string {
+  return encodeURIComponent(
+    filename
+      .replace(/\.mdx?$/, "") // .md 또는 .mdx 확장자 제거
+      .normalize("NFC") // 유니코드 정규화
+  );
+}
+
 export async function getAllPosts(): Promise<Post[]> {
   const files = fs.readdirSync(POSTS_PATH);
 
@@ -21,7 +30,7 @@ export async function getAllPosts(): Promise<Post[]> {
           title: data.title,
           description: data.description,
           date: data.date,
-          slug: file.replace(/\.mdx?$/, ""),
+          slug: createSlug(file),
           tags: data.tags || [],
           content: content,
         };
@@ -35,5 +44,7 @@ export async function getAllPosts(): Promise<Post[]> {
 
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
   const posts = await getAllPosts();
-  return posts.find((post) => post.slug === slug);
+  // URL 디코딩된 slug를 정규화하여 비교
+  const normalizedSlug = decodeURIComponent(slug).normalize("NFC");
+  return posts.find((post) => decodeURIComponent(post.slug) === normalizedSlug);
 }

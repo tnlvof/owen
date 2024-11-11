@@ -3,12 +3,15 @@ import { Mdx } from "@/components/mdx/mdx-components";
 import { notFound } from "next/navigation";
 
 type Props = {
-    params: Promise<{ slug: string }>;
-  };
+  params: Promise<{ slug: string }>;
+};
+
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export default async function BlogPostPage(props: Props) {
   const params = await props.params;
-  const post = await getPostBySlug(params.slug);
+  const post = await getPostBySlug(decodeURIComponent(params.slug));
 
   if (!post) {
     notFound();
@@ -27,4 +30,22 @@ export default async function BlogPostPage(props: Props) {
       <Mdx source={post.content} />
     </article>
   );
+}
+
+// 정적 메타데이터 생성
+export async function generateMetadata(props: Props) {
+  const params = await props.params;
+  const post = await getPostBySlug(decodeURIComponent(params.slug));
+  
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The post you are looking for does not exist.',
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+  };
 }
