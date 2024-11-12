@@ -1,6 +1,6 @@
 export function PostLoading() {
   return (
-    <div className="py-8 mx-auto max-w-2xl w-full">
+    <div className="p-4 mx-auto max-w-2xl w-full">
       <div className="mb-8 space-y-4">
         <div className="h-8 bg-muted rounded-lg w-2/3 animate-pulse" />
         <div className="h-5 bg-muted rounded-lg w-1/2 animate-pulse" />
