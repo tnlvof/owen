@@ -2,12 +2,12 @@
 
 
 ## 패키지 매니저
-- **패키지 매니저** `bun`을 사용합니다.
+- **패키지 매니저** `yarn berry`를 사용합니다.
 
 ## UI 컴포넌트 생성
 - **ShadCN 컴포넌트를 우선적으로 활용합니다.**
 - **ShadCN 컴포넌트 추가 명령어**:
-  - CLI 명령어 예시: `bunx --bun shadcn@latest add dialog`
+  - CLI 명령어 예시: `npx shadcn@latest add accordion`
 
 # Next.js Server Actions & API Routes 사용 지침
 - 이 지침은 **Next.js** 프로젝트에서 **Server Actions**와 **API Routes**를 어떻게 적절히 사용할지에 대한 안내입니다.
