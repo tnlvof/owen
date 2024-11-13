@@ -23,7 +23,9 @@ export function PostCard({ post }: PostCardProps) {
               </div>
             </div>
           </div>
-          <p className="text-sm text-card-foreground">{post.description}</p>
+          <p className="text-sm text-card-foreground line-clamp-2">
+            {post.content.slice(0, 150).replace(/[^\w\sㄱ-ㅎㅏ-ㅣ가-힣]/g, "")}
+          </p>
           <div className="flex flex-wrap gap-1">
             {post.tags?.map((tag) => (
               <Badge
