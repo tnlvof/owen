@@ -29,8 +29,7 @@ export default function AboutPage() {
                   Owen
                 </h1>
                 <p className="text-sm text-card-foreground">
-                  프론트엔드 및 백엔드 개발에 관심 있는 개발자입니다. 이
-                  블로그는 제 개인 프로젝트와 기술적 통찰을 공유하는 공간입니다.
+                  소통을 중요하게 생각하는 소프트웨어 엔지니어입니다.
                 </p>
               </div>
             </div>
