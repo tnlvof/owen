@@ -45,7 +45,7 @@ export default function AboutPage() {
               <li>프론트엔드: React, Next.js, TailwindCSS</li>
               <li>백엔드: Node.js, Nest.js</li>
               <li>데이터베이스: MySQL, PostgreSQL</li>
-              <li>기타: Git, AWS</li>
+              <li>기타: Git, AWS, Yarn</li>
             </ul>
           </div>
         </article>

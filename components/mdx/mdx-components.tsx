@@ -25,23 +25,23 @@ const components = {
     );
   },
   h1: ({ ...props }) => (
-    <h1 className="mt-8 mb-4 text-3xl font-bold" {...props} />
+    <h1 className="mt-8 mb-4 text-2xl font-bold" {...props} />
   ),
   h2: ({ ...props }) => (
-    <h2 className="mt-8 mb-4 text-2xl font-bold" {...props} />
+    <h2 className="mt-8 mb-4 text-xl font-bold" {...props} />
   ),
   h3: ({ ...props }) => (
     <h3 className="mt-8 mb-4 text-xl font-bold" {...props} />
   ),
   p: ({ ...props }) => (
-    <p className="leading-7 [&:not(:first-child)]:mt-6" {...props} />
+    <p className="leading-7 [&:not(:first-child)]:mt-4" {...props} />
   ),
-  ul: ({ ...props }) => <ul className="my-6 ml-6 list-disc" {...props} />,
-  ol: ({ ...props }) => <ol className="my-6 ml-6 list-decimal" {...props} />,
+  ul: ({ ...props }) => <ul className="my-4 ml-6 list-disc" {...props} />,
+  ol: ({ ...props }) => <ol className="my-4 ml-6 list-decimal" {...props} />,
   li: ({ ...props }) => <li className="mt-2" {...props} />,
   blockquote: ({ ...props }) => (
     <blockquote
-      className="mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground"
+      className="mt-4 border-l-2 pl-6 italic [&>*]:text-muted-foreground"
       {...props}
     />
   ),
