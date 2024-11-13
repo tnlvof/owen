@@ -19,7 +19,7 @@ async function BlogPost({ slug }: { slug: string }) {
   }
 
   return (
-    <article className="p-8 mx-auto max-w-2xl">
+    <article className="p-8 mx-auto max-w-2xl min-w-full">
       <header className="mb-8">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         {post.description && (

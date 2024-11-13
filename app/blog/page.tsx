@@ -5,7 +5,7 @@ export default async function BlogPage() {
   const posts = await getAllPosts();
 
   return (
-    <div className="w-full dark:bg-gray-900 min-h-[calc(100vh-3.5rem)]">
+    <div className="w-full dark:bg-gray-900 min-h-[calc(100vh-3.5rem)] ">
       <div className="w-full mx-auto p-4">
         <div className="space-y-8">
           {posts.map((post, index) => (
