@@ -9,7 +9,7 @@ interface PostCardProps {
 
 export function PostCard({ post }: PostCardProps) {
   return (
-    <Link href={`/blog/${post.slug}`} className="group block w-full ">
+    <Link href={`/${post.slug}`} className="group block w-full ">
       <article className="bg-card rounded-lg overflow-hidden shadow transition-all duration-300 hover:shadow-md w-full">
         <div className="p-6 space-y-4">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-2 sm:space-y-0">

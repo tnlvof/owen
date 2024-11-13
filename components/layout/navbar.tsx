@@ -10,7 +10,7 @@ import { SearchDialog } from "@/components/layout/search-dialog";
 import { Post } from "@/lib/types/post";
 
 const navigation = [
-  { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "/" },
   { name: "About", href: "/about" },
 ];
 

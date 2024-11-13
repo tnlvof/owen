@@ -42,6 +42,8 @@ export default function AboutPage() {
               Skill
             </h2>
             <ul className="list-disc list-inside space-y-1 text-sm text-card-foreground">
+              <li>소프트 스킬을 더 중요하게 생각합니다.</li>
+              <li>하드 스킬은 무엇이든 금방 배울 수 있다고 생각합니다.</li>
               <li>프론트엔드: React, Next.js, TailwindCSS</li>
               <li>백엔드: Node.js, Nest.js</li>
               <li>데이터베이스: MySQL, PostgreSQL</li>
