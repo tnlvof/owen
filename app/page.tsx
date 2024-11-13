@@ -4,11 +4,14 @@ import { getAllPosts, getAvailableYears } from "@/lib/utils/mdx";
 
 import { YearFilter } from "@/components/blog/year-filter";
 
-interface Props {
-  searchParams: { year?: string };
-}
+type Params = Promise<{ slug: string }>;
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+export default async function BlogPage(props: {
+  params: Params;
+  searchParams: SearchParams;
+}) {
+  const searchParams = await props.searchParams;
 
-export default async function BlogPage({ searchParams }: Props) {
   const posts = await getAllPosts();
 
   const years = await getAvailableYears();
