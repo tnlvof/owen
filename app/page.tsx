@@ -26,7 +26,7 @@ export default function AboutPage() {
               </Avatar>
               <div className="space-y-3 text-center sm:text-left">
                 <h1 className="text-lg font-semibold text-card-foreground">
-                  Owen
+                  이종수
                 </h1>
                 <p className="text-sm text-card-foreground">
                   소통을 중요하게 생각하는 소프트웨어 엔지니어입니다.
@@ -39,7 +39,12 @@ export default function AboutPage() {
         <article className="bg-card rounded-lg overflow-hidden shadow transition-all duration-300 hover:shadow-md w-full">
           <div className="p-6 space-y-4">
             <ul className="list-disc list-inside space-y-1 text-sm text-card-foreground">
-              <li>하드 스킬보다 소프트 스킬을 더 중요하게 생각합니다.</li>
+              <li>인생책은 김주환 교수님의 '내면소통'입니다.</li>
+              <li>성공한 삶은 자신이 원하는 삶을 사는 것이라고 생각합니다.</li>
+              <li>
+                정말 사랑스러운 두 아이의 아빠입니다. 좋은 아빠가 되기 위한
+                고민과 노력을 하고 있습니다.
+              </li>
             </ul>
           </div>
         </article>
@@ -85,7 +90,7 @@ export default function AboutPage() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/jongsoo-lee-23b0a91b7"
+                href="https://www.linkedin.com/in/devjslee/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
