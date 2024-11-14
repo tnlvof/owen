@@ -9,10 +9,7 @@ import { useEffect, useState } from "react";
 import { SearchDialog } from "@/components/layout/search-dialog";
 import { Post } from "@/lib/types/post";
 
-const navigation = [
-  { name: "Blog", href: "/" },
-  { name: "About", href: "/about" },
-];
+const navigation = [{ name: "Posts", href: "/posts" }];
 
 interface NavbarProps {
   posts: Post[];

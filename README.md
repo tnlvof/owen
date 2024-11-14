@@ -1,6 +1,6 @@
 ## 오웬의 블로그
 
-- 블로그 주소: https://owen-psi.vercel.app/
+- 블로그 주소: https://jongsoo.kr
 
 ## 기술 스택
 
