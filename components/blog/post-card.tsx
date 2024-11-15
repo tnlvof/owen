@@ -24,7 +24,16 @@ export function PostCard({ post }: PostCardProps) {
             </div>
           </div>
           <p className="text-sm text-card-foreground line-clamp-2">
-            {post.content.slice(0, 150).replace(/[^\w\sㄱ-ㅎㅏ-ㅣ가-힣]/g, "")}
+            {post.description ||
+              post.content
+                .replace(/^---[\s\S]*?---/, "") // frontmatter 제거
+                .replace(/#+\s/g, "") // 헤더 문법 제거
+                .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // 링크 문법에서 텍스트만 추출
+                .replace(/[*_`]/g, "") // 볼드, 이탤릭, 코드 문법 제거
+                .replace(/<br\/>/g, " ") // br 태그 공백으로 변경
+                .replace(/\n/g, " ") // 줄바꿈을 공백으로 변경
+                .trim()
+                .slice(0, 150)}
           </p>
           <div className="flex flex-wrap gap-1">
             {post.tags?.map((tag) => (
