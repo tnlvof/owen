@@ -39,7 +39,7 @@ export default function AboutPage() {
         <article className="bg-card rounded-lg overflow-hidden shadow transition-all duration-300 hover:shadow-md w-full">
           <div className="p-6 space-y-4">
             <ul className="list-disc list-inside space-y-1 text-sm text-card-foreground">
-              <li>인생책은 김주환 교수님의 '내면소통'입니다.</li>
+              <li>인생책은 김주환 교수님의 &apos;내면소통&apos;입니다.</li>
               <li>성공한 삶은 자신이 원하는 삶을 사는 것이라고 생각합니다.</li>
               <li>
                 정말 사랑스러운 두 아이의 아빠입니다. 좋은 아빠가 되기 위한
