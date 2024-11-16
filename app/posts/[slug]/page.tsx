@@ -36,7 +36,6 @@ async function BlogPost({ slug }: { slug: string }) {
           </p>
         )}
       </header>
-      <Mdx source={post.content} />
       {post.tags && post.tags.length > 0 && (
         <div className="flex flex-wrap gap-1 mt-8">
           {post.tags.map((tag) => (
@@ -50,6 +49,7 @@ async function BlogPost({ slug }: { slug: string }) {
           ))}
         </div>
       )}
+      <Mdx source={post.content} />
     </article>
   );
 }
