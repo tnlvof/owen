@@ -26,45 +26,42 @@ const components = {
   },
   h1: ({ ...props }) => (
     <h1
-      className="mt-10 mb-6 text-[1.6rem] font-bold text-gray-900 dark:text-gray-100"
+      className="mt-10 mb-6 text-3xl font-bold text-gray-900 dark:text-gray-100"
       {...props}
     />
   ),
   h2: ({ ...props }) => (
     <h2
-      className="mt-8 mb-4 text-[1.4rem] font-semibold text-gray-800 dark:text-gray-200"
+      className="mt-8 mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-200"
       {...props}
     />
   ),
   h3: ({ ...props }) => (
     <h3
-      className="mt-6 mb-4 text-[1.2rem] font-medium text-gray-800 dark:text-gray-200"
+      className="mt-6 mb-4 text-xl font-medium text-gray-800 dark:text-gray-200"
       {...props}
     />
   ),
   p: ({ ...props }) => (
     <p
-      className="leading-7 [&:not(:first-child)]:mt-4 text-[0.9rem] text-gray-600 dark:text-gray-300"
+      className="leading-7 [&:not(:first-child)]:mt-4  text-gray-600 dark:text-gray-300"
       {...props}
     />
   ),
   ul: ({ ...props }) => (
     <ul
-      className="my-4 ml-6 list-disc marker:text-gray-400 dark:marker:text-gray-500 text-[0.9rem]"
+      className="my-4 ml-6 list-disc marker:text-gray-400 dark:marker:text-gray-500 "
       {...props}
     />
   ),
   ol: ({ ...props }) => (
     <ol
-      className="my-4 ml-6 list-decimal marker:text-gray-400 dark:marker:text-gray-500 text-[0.9rem]"
+      className="my-4 ml-6 list-decimal marker:text-gray-400 dark:marker:text-gray-500 "
       {...props}
     />
   ),
   li: ({ ...props }) => (
-    <li
-      className="mt-2 text-[0.9rem] text-gray-600 dark:text-gray-300"
-      {...props}
-    />
+    <li className="mt-2  text-gray-600 dark:text-gray-300" {...props} />
   ),
   blockquote: ({ ...props }) => (
     <blockquote
@@ -89,10 +86,7 @@ const components = {
   ),
   table: ({ ...props }) => (
     <div className="my-6 w-full overflow-y-auto">
-      <table
-        className="w-full text-[0.9rem] text-gray-600 dark:text-gray-300"
-        {...props}
-      />
+      <table className="w-full  text-gray-600 dark:text-gray-300" {...props} />
     </div>
   ),
   th: ({ ...props }) => (

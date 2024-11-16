@@ -14,7 +14,7 @@ export function PostCard({ post }: PostCardProps) {
         <div className="p-6 space-y-4">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-2 sm:space-y-0">
             <div className="space-y-1">
-              <h2 className="text-lg font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">
+              <h2 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">
                 {post.title}
               </h2>
               <div className="flex items-center text-xs text-muted-foreground">
