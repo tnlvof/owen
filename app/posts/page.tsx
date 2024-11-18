@@ -22,16 +22,16 @@ export default async function BlogPage(props: {
 
   return (
     <div className="w-full dark:bg-gray-900 min-h-[calc(100vh-3.5rem)]">
-      <div className="w-full mx-auto p-4">
-        <div className="mb-6">
+      <div className="max-w-[672px] mx-auto py-6">
+        <div className="mb-8">
           <YearFilter years={years} />
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {filteredPosts.map((post, index) => (
             <div
               key={post.slug}
-              className="opacity-0 animate-fade-in w-full"
+              className="opacity-0 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <PostCard post={post} />

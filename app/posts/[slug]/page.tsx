@@ -21,11 +21,11 @@ async function BlogPost({ slug }: { slug: string }) {
   }
 
   return (
-    <article className="p-8 mx-auto max-w-2xl min-w-full">
-      <header className="mb-12">
-        <h1 className="text-3xl font-bold">{post.title}</h1>
+    <article className="max-w-[672px] mx-auto  py-6">
+      <header className="mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold">{post.title}</h1>
         {post.tags && post.tags.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-6">
+          <div className="flex flex-wrap gap-1.5 mt-4">
             {post.tags.map((tag) => (
               <Badge
                 key={tag}
@@ -37,14 +37,14 @@ async function BlogPost({ slug }: { slug: string }) {
             ))}
           </div>
         )}
-        <div className="mt-6 text-sm text-muted-foreground">
-          <div className="flex items-center text-sn text-muted-foreground">
+        <div className="mt-4 text-sm text-muted-foreground">
+          <div className="flex items-center">
             <CalendarIcon className="mr-1 h-3 w-3" />
             <time dateTime={post.date}>{post.date}</time>
           </div>
         </div>
         {post.description && (
-          <p className="mt-2 text-xl text-muted-foreground">
+          <p className="mt-4 text-lg text-muted-foreground">
             {post.description}
           </p>
         )}

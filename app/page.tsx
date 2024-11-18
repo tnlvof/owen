@@ -6,17 +6,17 @@ import profile from "@/public/owen.jpg";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col dark:bg-gray-900 p-4 min-h-[calc(100vh-3.5rem)] min-w-full">
+    <div className="flex flex-col dark:bg-gray-900 min-w-full py-6 h-[calc(100vh-3.5rem)]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="w-full max-w-2xl space-y-6"
       >
-        <article className="bg-card rounded-lg overflow-hidden shadow transition-all duration-300 hover:shadow-md ">
-          <div className="p-6 space-y-4">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-5">
-              <Avatar className="w-20 h-20 sm:w-24 sm:h-24">
+        <article className="bg-card rounded-lg overflow-hidden transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-5">
+              <Avatar className="w-40 h-40 sm:w-24 sm:h-24 order-1 sm:order-2">
                 <AvatarImage
                   src={profile.src}
                   alt="Owen Blog의 프로필 사진"
@@ -24,20 +24,17 @@ export default function AboutPage() {
                 />
                 <AvatarFallback>OB</AvatarFallback>
               </Avatar>
-              <div className="space-y-3 text-center sm:text-left">
+              <div className="order-2 sm:order-1 space-y-3 text-center sm:text-left">
                 <h1 className="text-lg font-semibold text-card-foreground">
                   이종수
                 </h1>
-                <p className="text-sm text-card-foreground">
-                  소통을 중요하게 생각하는 소프트웨어 엔지니어입니다.
-                </p>
               </div>
             </div>
           </div>
         </article>
 
-        <article className="bg-card rounded-lg overflow-hidden shadow transition-all duration-300 hover:shadow-md w-full">
-          <div className="p-6 space-y-4">
+        <article className="bg-card rounded-lg overflow-hidden  transition-all duration-300  w-full">
+          <div className=" space-y-4">
             <ul className="list-disc list-inside space-y-1 text-sm text-card-foreground">
               <li>인생책은 김주환 교수님의 &apos;내면소통&apos;입니다.</li>
               <li>성공한 삶은 자신이 원하는 삶을 사는 것이라고 생각합니다.</li>
@@ -49,14 +46,14 @@ export default function AboutPage() {
           </div>
         </article>
 
-        <article className="bg-card rounded-lg overflow-hidden shadow transition-all duration-300 hover:shadow-md w-full">
-          <div className="p-6 space-y-4">
+        <article className="bg-card rounded-lg overflow-hidden  transition-all duration-300  w-full">
+          <div className=" space-y-4">
             <h2 className="text-lg font-semibold text-card-foreground">
               Contact
             </h2>
             <div className="space-y-2">
               <a
-                href="mailto:tnlvof@kakao.com"
+                href="mailto:jongsoo.dev@gmail.com"
                 className="flex items-center space-x-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
               >
                 <svg
@@ -69,7 +66,7 @@ export default function AboutPage() {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <span>tnlvof@kakao.com</span>
+                <span>jongsoo.dev@gmail.com</span>
               </a>
 
               <a

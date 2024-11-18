@@ -6,6 +6,11 @@ import matter from "gray-matter";
 
 import { Post } from "@/lib/types/post";
 
+import { serialize } from "next-mdx-remote/serialize";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypePrettyCode from "rehype-pretty-code";
+
 export async function getAllPosts(): Promise<Post[]> {
   const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -77,4 +82,21 @@ export async function getPostBySlug(slug: string): Promise<Post | undefined> {
   const normalizedSlug = decodeURIComponent(slug).normalize("NFC");
 
   return posts.find((post) => decodeURIComponent(post.slug) === normalizedSlug);
+}
+
+export async function serializeMDX(content: string) {
+  return serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [
+        rehypeSlug,
+        [
+          rehypePrettyCode,
+          {
+            theme: "github-dark",
+          },
+        ],
+      ],
+    },
+  });
 }

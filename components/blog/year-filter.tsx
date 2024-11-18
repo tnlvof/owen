@@ -25,7 +25,7 @@ export function YearFilter({ years }: YearFilterProps) {
     } else {
       params.set("year", year);
     }
-    router.push(`/?${params.toString()}`);
+    router.push(`posts/?${params.toString()}`);
   };
 
   return (
