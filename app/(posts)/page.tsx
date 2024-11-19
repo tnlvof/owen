@@ -1,8 +1,8 @@
 import { PostCard } from "@/components/blog/post-card";
 
-import { getAllPosts, getAvailableYears } from "@/lib/utils/mdx";
+import { getAllPosts } from "@/lib/utils/mdx";
 
-import { YearFilter } from "@/components/blog/year-filter";
+// import { YearFilter } from "@/components/blog/year-filter";
 
 type Params = Promise<{ slug: string }>;
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
@@ -14,18 +14,18 @@ export default async function BlogPage(props: {
 
   const posts = await getAllPosts();
 
-  const years = await getAvailableYears();
+  // const years = await getAvailableYears();
 
   const filteredPosts = searchParams.year
     ? posts.filter((post) => post.year === searchParams.year)
     : posts;
 
   return (
-    <div className="w-full dark:bg-gray-900 min-h-[calc(100vh-3.5rem)]">
+    <div className="w-full  ">
       <div className="max-w-[672px] mx-auto py-6">
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <YearFilter years={years} />
-        </div>
+        </div> */}
 
         <div className="space-y-6">
           {filteredPosts.map((post, index) => (
